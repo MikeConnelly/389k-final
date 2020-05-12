@@ -282,7 +282,8 @@ app.delete('/api/comment/:postID/:commentNum', (req, res) => {
 })
 
 
-http.listen(3000, () => {
+var port = process.env.PORT || 3000;
+http.listen(port, () => {
   console.log('Listening on port 3000!');
 });
 
