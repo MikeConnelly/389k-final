@@ -17,15 +17,15 @@
 	{{#if data}}
 		{{#each data}}
 		<article class="post">
-			<h2 class="title" id={{this.id}}><a href="/post/{{this.id}}">{{this.title}}</a></h2>
+			<h2 class="title" id={{id}}><a href="/post/{{id}}">{{title}}</a></h2>
 			<div class="post-header">
-				<p class="difficulty">Difficulty: {{this.difficulty}}</p>
-				<p classs="tags">Tagged: {{this.tags}}</p>
+				<p class="difficulty">Difficulty: {{difficulty}}</p>
+				<p classs="tags">Tagged: {{tags}}</p>
 			</div>
 			<i>{{time}}</i>
 			<hr>
 			<div class="content">
-				{{{this.preview}}}...
+				{{{preview}}}...
 			</div>
 		</article>
 		{{/each}}
