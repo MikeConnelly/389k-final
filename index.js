@@ -15,8 +15,7 @@ var Comment = require('./models/Comment');
 var getTags = require('./utils/getTags');
 
 dotenv.config();
-console.log(process.env.MONGODB);
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(`mongodb+srv://Mike389k:${process.env.MONGOPASS}@cluster0-hfvx4.mongodb.net/test?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
