@@ -3,20 +3,20 @@
     <form method="POST" action="/api/create">
         <div class="input-field">
             <label>Title:</label>
-            <input id='title' type="text" name="title" size="50" placeholder="Title...">
+            <input id='title' type="text" name="title" size="50" placeholder="Title..." autocomplete="off">
         </div>
         <div class="difficulty-field">
             <label>Difficulty (1 through 5):</label>
             <p id="difficulty-value">3</p>
-            <input id='diff' type="range" name="difficulty" min="1" max="5" onchange="updateValue(this.value);">
+            <input id='diff' type="range" name="difficulty" min="1" max="5" onchange="updateValue(this.value);" autocomplete="off">
         </div>
         <div class="input-field">
             <label>Tags:</label>
-            <input id='tags' type="text" name="tags" size="50" placeholder="Tag1 Tag2 Tag3 (seperated by spaces)">
+            <input id='tags' type="text" name="tags" size="50" placeholder="Tag1 Tag2 Tag3 (seperated by spaces)" autocomplete="off">
         </div>
         <div class="input-field">
             <label>Description:</label>
-            <textarea id='desc' type="text" name="description" rows="20"></textarea>
+            <textarea id='desc' type="text" name="description" rows="20"></textarea autocomplete="off">
         </div>
         <button id="submit-post" type="submit">Create Post</button>
     </form>
