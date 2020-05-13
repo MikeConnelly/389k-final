@@ -280,7 +280,7 @@ app.delete('/api/post/:id', (req, res) => {
 app.delete('/api/comment/:postID/:commentNum', (req, res) => {
   const postID = parseInt(req.params.postID);
   const commentNum = parseInt(req.params.commentNum);
-  Comment.deleteOne({ postID: postID, commentNum: commentNum }, err => {
+  Comment.deleteOne({ postID: postID, commentNumber: commentNum }, err => {
     if (err) throw err;
     res.redirect(`/post/${postID}`);
   });
