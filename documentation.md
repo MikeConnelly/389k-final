@@ -23,7 +23,36 @@ When a user creates a new post, other users on the home page will see it appear 
 
 POST endpoint route 1: `/api/create`
 
+```javascript
+var options = { 
+    method: 'POST',
+    url: 'https://coding-challenges-389k.herokuapp.com/api/create',
+    headers: { 
+        'content-type': 'application/x-www-form-urlencoded' 
+    },
+    form: { 
+      title: 'fibonacci',
+      description: 'output the fibonacci sequence',
+      tags: ['beginner', 'recursion'],
+      difficulty: 3
+    } 
+};
+```
+
 POST endpoint route 2: `/api/comment/:postID`
+
+```javascript
+var options = { 
+    method: 'POST',
+    url: 'https://coding-challenges-389k.herokuapp.com/api/comment/0',
+    headers: { 
+        'content-type': 'application/x-www-form-urlencoded' 
+    },
+    body: { 
+      text: 'example comment'
+    }
+};
+```
 
 ### 3. Delete endpoints
 
@@ -41,9 +70,21 @@ It is used frequently on the backend to update what tags appear in the navbar.
 Moment.js is used to get and format the current time.
 Marked.js is used to render markdown text as html.
 
+### 6. View data
+
+Navigation
+1. random -> `  /random  `
+2. easiest -> `  /easiest  `
+3. hardest -> `  /hardest  `
+4. shortest description -> `  /shortest  `
+5. longest description -> `  /longest  `
+5. sort by tag -> `  /tag/:tag  `
+6. create -> `   /create   `
+7. about page -> `  /about   `
+8. view post -> `   /post/:id   ` and `  /post/title/:title   `
 
 
-### Midterm Project Documentation:
+### Updated Midterm Project Documentation:
 
 ### 1. Data Format and Storage
 
@@ -53,8 +94,8 @@ Challenge data point fields:
 - `Field 3`:     preview       `Type: String`
 - `Field 4`:     date          `Type: String`
 - `Field 5`:     tags          `Type: [String]`
-- `Field 5`:     difficulty    `Type: Number`
-- `Field 5`:     id            `Type: Number`
+- `Field 6`:     difficulty    `Type: Number`
+- `Field 7`:     id            `Type: Number`
 
 Challenge schema: 
 ```javascript
