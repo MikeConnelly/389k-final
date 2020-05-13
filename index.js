@@ -210,6 +210,11 @@ app.get('/create', (req, res) => {
 });
 
 
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+
 app.post('/api/create', (req, res) => {
   const body = req.body;
   const desc = marked(body.description);

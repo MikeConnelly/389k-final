@@ -1,9 +1,5 @@
 have a delete button on each post and comment
-test delete endpoints***
-delete all comments on that post as well
-
-need sockets
-sockets now create a new post above the post list that uses title for endpoint
+test delete endpoints
 
 description page? /about
 
@@ -19,5 +15,4 @@ deploy
 
 
 
-
-comments dont appear on random
+change page title
